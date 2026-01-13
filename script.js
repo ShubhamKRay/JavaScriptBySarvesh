@@ -23,3 +23,22 @@ var x = 10;
 console.log(x);
 console.log(typeof x); //number
 console.log(typeof typeof x); //string
+
+var n6 = undefined;
+console.log(n6); //undefined
+console.log(typeof n6); //undefined
+
+var n7 = null;
+console.log(n7); //null
+console.log(typeof n7); //object
+
+var n8 = 46904861032786642715643138781982734654313543n;
+var n9 = BigInt("1234567890123456789012345678901234567890");
+console.log(n8); //46904861032786642715643138781982734654313543n
+console.log(n9); //1234567890123456789012345678901234567890n
+console.log(typeof n8); //bigint
+console.log(typeof n9); //bigint
+
+var n10 = Symbol("This is my symbol");
+console.log(n10); //Symbol(This is my symbol)
+console.log(typeof n10); //symbol
