@@ -40,5 +40,15 @@ console.log(typeof n8); //bigint
 console.log(typeof n9); //bigint
 
 var n10 = Symbol("This is my symbol");
+var n11 = Symbol("This is my symbol");
+
 console.log(n10); //Symbol(This is my symbol)
 console.log(typeof n10); //symbol
+
+console.log(n10 === n11); //false
+console.log(n10 == n11); //false
+
+var n12 = 10;
+var n13 = "10";
+console.log(n12 == n13); //true
+console.log(n12 === n13); //false
