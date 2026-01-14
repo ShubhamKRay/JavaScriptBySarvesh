@@ -1,54 +1,197 @@
-//! Primitive Data Types
+//! TYPES OF PRINTING STATEMENTS
 
-var n1 = 10.987;
-console.log(n1); //10.987
-console.log(typeof n1); //number
-var n2 = "Hello";
-var n3 = "World";
-console.log(n2, n3); //Hello World
-console.log(typeof n3); //string
+// console.log("External JS")
 
-//`` using backticks we can write multi line strings and we can usestring interpolation using ${}
-var n4 = `Hey There !!!
-Let's learn JavaScript ${n3}`;
-console.log(n4); //Hey!!! Let's learn JavaScript World
-console.log(typeof n4); //string
+// document.writeln("<i>Hello</i>")
+// document.writeln("<b>Hello</b>")
+// document.writeln("Hello")
+// document.writeln("Hello")
+// document.writeln("Hello")
 
-var n5 = true;
-console.log(n5); //true
-console.log(typeof n5); //boolean
-console.log(typeof typeof n5); //string
+// document.write("World")
+// document.write("World")
+// document.write("World")
+// document.write("World")
+// document.write("World")
 
-var x = 10;
-console.log(x);
-console.log(typeof x); //number
-console.log(typeof typeof x); //string
+//! TOKENS : smallest unit of any programming lang
+/*
+THERE ARE 4 TYPES OF TOKENS
 
-var n6 = undefined;
-console.log(n6); //undefined
-console.log(typeof n6); //undefined
+1) Keywords: reserved words which has specific meaning 
+ - Example :- var, let, const, for, if ,etc...
 
-var n7 = null;
-console.log(n7); //null
-console.log(typeof n7); //object
+2) Identifiers : name given to a class, methods, variables are known as identifier
 
-var n8 = 46904861032786642715643138781982734654313543n;
-var n9 = BigInt("1234567890123456789012345678901234567890");
-console.log(n8); //46904861032786642715643138781982734654313543n
-console.log(n9); //1234567890123456789012345678901234567890n
-console.log(typeof n8); //bigint
-console.log(typeof n9); //bigint
+3) Literals / Values : a value stored in a variable is known as literals
 
-var n10 = Symbol("This is my symbol");
-var n11 = Symbol("This is my symbol");
+4) Operators : to perform operation between two or more operands
 
-console.log(n10); //Symbol(This is my symbol)
-console.log(typeof n10); //symbol
+EXAMPLE :  var name = "John Doe"
+*/
 
-console.log(n10 === n11); //false
-console.log(n10 == n11); //false
+/*
+! WE HAVE 2 TYPES OF DATATYPES
+1) PRIMITIVE  -> IMMUTABLE
 
-var n12 = 10;
-var n13 = "10";
-console.log(n12 == n13); //true
-console.log(n12 === n13); //false
+- In primitive there are 7 types:
+
+1) number
+2) string
+3) boolean
+4) undefined
+5) null
+6) bigInt
+7) symbol
+
+
+2) NON-PRIMITIVE -> MUTABLE
+
+- There are 3 types
+
+1) array
+2) object
+3) function
+*/
+
+//! MUTABLE AND IMMUTABLE EXAMPLE
+
+// var str = "HELLO";
+// str[0] = "X";
+// console.log(str); // immutable, cannot change
+
+// var arr = [10, 20, 30, 40, 50];
+// arr[0] = 100;
+// console.log(arr); // mutable, can change
+
+//! PRIMITIVE DATA TYPES EXAMPLES
+
+// var n1 = 10.987;
+// console.log(n1); // 10.987
+// console.log(typeof n1); // number
+
+// var n2 = "Hello";
+// var n3 = "World";
+// console.log(n2, n3); // Hello World
+// console.log(typeof n3); // string
+
+// // `` using backticks we can write multi-line strings and we can use string interpolation using ${}
+// var n4 = `Hey There !!!
+// Lets go to javascript ${n3} `;
+// console.log(n4);
+// console.log(typeof n4);
+
+// var n5 = true;
+// console.log(n5); // true
+// console.log(typeof n5); // boolean
+
+// console.log(typeof typeof n5); // string
+
+// var n6 = undefined;
+// console.log(n6); // undefined
+// console.log(typeof n6); // undefined
+
+// var n7 = null;
+// console.log(n7); // null
+// console.log(typeof n7); // object
+
+// var n8 = 9n;
+// console.log(n8); // 9n
+// console.log(typeof n8); // bigint
+
+// var n9 = Symbol("hello");
+// var n10 = Symbol("hello");
+
+// console.log(n9); // Symbol(hello)
+// console.log(n10); // Symbol(hello)
+
+// console.log(n9 == n10); // false
+// console.log(n9 === n10); // false
+
+// //! STRICTLY AND LOOSLY COMPARISION
+// var n11 = 10;
+// var n12 = "10";
+// console.log(n11 == n12); // true
+// console.log(n11 === n12); // false
+
+// //! VAR , LET AND CONST DIFFERENCE
+
+// var a;
+// console.log(a); // ud
+// a = 10;
+// console.log(a); // 10
+// var b = 20
+// console.log(b); // 20
+// var b;
+// console.log(b); // 20
+// b = 30
+// console.log(b); // 30
+// var a = 40
+// console.log(a); // 40
+
+// let c;
+// console.log(c); // ud
+// c = 100
+// console.log(c); // 100
+// let d = 200
+// console.log(d); // 200
+// // let c ;//! Cannot redeclare
+// d = 300
+// console.log(d); // 300
+// // let d = 400 //! Cannot redeclare and reinitialize
+
+// //! declare and initialize at same time
+// const e = 1000
+// console.log(e); // 1000
+
+//! HOISTING : moving declaration part at the top of the original code internally
+
+// var a = undefined <--- hoisting happens internally
+// console.log(a);
+// var a = 10
+// console.log(a); // 10
+
+//! TDZ (TEMPORAL DEAD ZONE) : the time period between accessing let and const variable before declaration
+
+// let b
+// console.log(b);//! error -> Cannot access 'b' before initialization
+// let b = 20
+// console.log(b); // 20
+
+// let c  <--- hoisted but value will be unavailable
+// console.log(c); //! error -> Cannot access 'c' before initialization
+// let c;
+// console.log(c);// ud
+
+//! GEC (GLOBAL EXECUTION CONTEXT)
+// debugger;
+// console.log("Start");
+// console.log(a);
+// var a = 10
+// console.log(a);
+// let b;
+// console.log(b);
+// b = 20
+// const c = 100
+// console.log(c);
+// console.log("End");
+
+// ! TYPES OF VARIABLES AND ITS SCOPE
+
+// ! 1) GLOBAL VARIABLES : can be accessed anywhere throughout the code
+var a = 10; // GLOBAL SCOPE <- DUE TO HOISTING
+let b = 20; // SCRIPT SCOPE <- DUE TO TDZ
+const c = 30; // SCRIPT SCOPE <- DUE TO TDZ
+
+if (100 > 2) {
+  console.log(a, b, c);
+}
+
+for (let i = 0; i < 5; i++) {
+  console.log(a, b, c);
+}
+
+function demo1() {
+  console.log(a, b, c);
+}
+demo1();
