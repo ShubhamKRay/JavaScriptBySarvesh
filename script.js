@@ -281,14 +281,6 @@ EXAMPLE :  var name = "John Doe"
 // prompt("Enter Age");
 // printFullName(firstNameInput, lastNameInput, ageInput);
 
-
-
-
-
-
-
-
-
 //! 5) RETURN TYPE FUNCTION
 
 // function getEmail(fname, lname){
@@ -300,9 +292,6 @@ EXAMPLE :  var name = "John Doe"
 // let value = getEmail("Tommy","Shelby");
 // console.log(value[0]);
 // console.log(value[1]);
-
-
-
 
 //! 6) NESTED FUNCTION
 
@@ -316,14 +305,7 @@ EXAMPLE :  var name = "John Doe"
 // }
 // parent();
 
-
-
-
-
-
-
-
-//! Closure is a temporary memory which is created whenever we try to access parent function's property inside child function and it 
+//! Closure is a temporary memory which is created whenever we try to access parent function's property inside child function and it
 
 // debugger
 // function parent() {
@@ -337,10 +319,6 @@ EXAMPLE :  var name = "John Doe"
 //   child();
 // }
 // parent();
-
-
-
-
 
 // debugger
 // function parent() {
@@ -359,19 +337,7 @@ EXAMPLE :  var name = "John Doe"
 
 // val();
 
-
-
-
-
-
-
-
-
-
-
-
 //! 7) HIGHER ORDER FUNCTION AND CALLBACK FUNCTION
-
 
 // A function which passes as an argument to another function is known as Callback function
 
@@ -381,10 +347,9 @@ EXAMPLE :  var name = "John Doe"
 // function demo( fn ){
 //   fn();
 // }
-// demo( function () { 
+// demo( function () {
 //   console.log("Hii There !");
 // });
-
 
 // 2) if a function returns another function
 
@@ -396,8 +361,6 @@ EXAMPLE :  var name = "John Doe"
 // let val = parent();
 // val();
 
-
-
 // function Demo1(){
 //   console.log("Demo1");
 //   return function Demo2(){
@@ -406,51 +369,35 @@ EXAMPLE :  var name = "John Doe"
 // }
 // Demo1()() // <-----JS CURRYING
 
-
-
-
-
-
-
 //! 8) ARROW FUNCTION
 
 let a1 = () => {
   console.log("I am Arrow Function 1");
 };
-a1()
-
+a1();
 
 // if no parameter, we can replace() with _
-let a2 = _ => {
-console.log("I am Arrow function 2");
+let a2 = (_) => {
+  console.log("I am Arrow function 2");
 };
-a2()
-
+a2();
 
 // if having only one parameter, () is not mandatory
-let a3 = n1 => {
-  console.log("I am Arrow function 3",n1);
-}
-a3(100)
-
-
-
+let a3 = (n1) => {
+  console.log("I am Arrow function 3", n1);
+};
+a3(100);
 
 // if having only one line of code {} is not mandatory
 let a4 = () => console.log("I am Arrow function 4");
 a4();
 
-
-
-
 // explicit return , {} and return "keyword" is mandatory
-let a5 = (n1,n2) => {
-   return n1+n2
-  }
-  console.log(a5(10,20));
+let a5 = (n1, n2) => {
+  return n1 + n2;
+};
+console.log(a5(10, 20));
 
 //implicit return, {} and "return" keyword is not required
-let a6 = (n1,n2) => n1+n2;
-console.log(a6(5,10));
-
-
+let a6 = (n1, n2) => n1 + n2;
+console.log(a6(5, 10));
