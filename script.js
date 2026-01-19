@@ -378,44 +378,79 @@ EXAMPLE :  var name = "John Doe"
 // - A function which passes any of these requirements
 // 1) if a function accepts another function as an argument that known as Higher Order function
 
-function demo( fn ){
-  fn();
-}
-demo( function () { 
-  console.log("Hii There !");
-});
+// function demo( fn ){
+//   fn();
+// }
+// demo( function () { 
+//   console.log("Hii There !");
+// });
 
 
 // 2) if a function returns another function
 
-function parent(){
-  return function Child(){
-    console.log("Hello");
-  };
+// function parent(){
+//   return function Child(){
+//     console.log("Hello");
+//   };
+// }
+// let val = parent();
+// val();
+
+
+
+// function Demo1(){
+//   console.log("Demo1");
+//   return function Demo2(){
+//     console.log("Demo2");
+//   };
+// }
+// Demo1()() // <-----JS CURRYING
+
+
+
+
+
+
+
+//! 8) ARROW FUNCTION
+
+let a1 = () => {
+  console.log("I am Arrow Function 1");
+};
+a1()
+
+
+// if no parameter, we can replace() with _
+let a2 = _ => {
+console.log("I am Arrow function 2");
+};
+a2()
+
+
+// if having only one parameter, () is not mandatory
+let a3 = n1 => {
+  console.log("I am Arrow function 3",n1);
 }
-let val = parent();
-val();
-
-
-
-function Demo1(){
-  console.log("Demo1");
-  return function Demo2(){
-    console.log("Demo2");
-  };
-}
-Demo1()() // <-----JS CURRYING
+a3(100)
 
 
 
 
+// if having only one line of code {} is not mandatory
+let a4 = () => console.log("I am Arrow function 4");
+a4();
 
 
 
 
+// explicit return , {} and return "keyword" is mandatory
+let a5 = (n1,n2) => {
+   return n1+n2
+  }
+  console.log(a5(10,20));
 
-
-
-
+//implicit return, {} and "return" keyword is not required
+let a6 = (n1,n2) => n1+n2;
+console.log(a6(5,10));
 
 
