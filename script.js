@@ -227,15 +227,195 @@ EXAMPLE :  var name = "John Doe"
 // }
 // greet()
 
-console.log("Start");
-var a;
-console.log(a);
-fun();
-a = 10;
-console.log(fun);
-function fun() {
-  var str = "Hello";
-  console.log(str);
+// console.log("Start");
+// var a;
+// console.log(a);
+// fun();
+// a = 10;
+// console.log(fun);
+// function fun() {
+//   var str = "Hello";
+//   console.log(str);
+// }
+// console.log(fun);
+// fun();
+
+//! 2) ANONYMOUS FUNCTION : function without name
+// function (){
+//   console.log("I am Anonymous function");
+// }
+
+//! 3) FUNCTION EXPRESSION : its is used to call / invoke anonymous function
+
+// console.log(f1);//ud
+//f1()
+
+// var f1 = function (){
+//   console.log("I am Anonymous function called by using FUnction expression");
+// };
+
+// console.log(f1);// it will print function with body
+// f1() // it will call the function
+
+//! 4) PARAMETERIZED FUNCTION
+// function sum(n1 = 0, n2 = 0) {
+//   console.log(n1 + n2);
+// }
+// sum(10, 20);
+// sum();
+
+// function demo1(n1, n2, n3, n4, n5) {
+//   console.log(n1, n2, n3, n4, n5);
+//   console.log(arguments);
+// }
+// // demo1(10,20,30,40,50)
+// // demo1(10,20)
+// demo1(10, 20, 30, 40, 50, 60, 70, 80, 90);
+
+// function printFullName(firstName, lastName, age) {
+//   console.log(`My Name is ${firstName} ${lastName} ${age}`);
+// }
+// let firstNameInput = prompt("Enter FirstName");
+// let lastNameInput = prompt("Enter LastName");
+// let ageInput = (prompt("Enter Age"));
+// prompt("Enter Age");
+// printFullName(firstNameInput, lastNameInput, ageInput);
+
+
+
+
+
+
+
+
+
+//! 5) RETURN TYPE FUNCTION
+
+// function getEmail(fname, lname){
+//   let fullName = `${fname} ${lname}`;
+//   let email = `${fname}.${lname}@gmail.com`;
+//   return [fullName,email];
+// }
+
+// let value = getEmail("Tommy","Shelby");
+// console.log(value[0]);
+// console.log(value[1]);
+
+
+
+
+//! 6) NESTED FUNCTION
+
+// function parent(){
+//   console.log("I am Parent");
+
+//   function child(){
+//     console.log("I am Child");
+//   }
+//   child();
+// }
+// parent();
+
+
+
+
+
+
+
+
+//! Closure is a temporary memory which is created whenever we try to access parent function's property inside child function and it 
+
+// debugger
+// function parent() {
+//   let a1 = 100;
+//   console.log("I am Parent",a1);
+
+//   function child() {
+//     let b1 = 200;
+//     console.log("I am Child",b1);
+//   }
+//   child();
+// }
+// parent();
+
+
+
+
+
+// debugger
+// function parent() {
+//   let a1 = 100;
+//   console.log("I am Parent",a1);
+
+//   function child() {
+//     let b1 = 200;
+//     console.log("I am Child",b1,a1);
+//   }
+//   return child();
+// }
+
+// let val = parent();
+// console.log(val);
+
+// val();
+
+
+
+
+
+
+
+
+
+
+
+
+//! 7) HIGHER ORDER FUNCTION AND CALLBACK FUNCTION
+
+
+// A function which passes as an argument to another function is known as Callback function
+
+// - A function which passes any of these requirements
+// 1) if a function accepts another function as an argument that known as Higher Order function
+
+function demo( fn ){
+  fn();
 }
-console.log(fun);
-fun();
+demo( function () { 
+  console.log("Hii There !");
+});
+
+
+// 2) if a function returns another function
+
+function parent(){
+  return function Child(){
+    console.log("Hello");
+  };
+}
+let val = parent();
+val();
+
+
+
+function Demo1(){
+  console.log("Demo1");
+  return function Demo2(){
+    console.log("Demo2");
+  };
+}
+Demo1()() // <-----JS CURRYING
+
+
+
+
+
+
+
+
+
+
+
+
+
+
