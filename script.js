@@ -320,6 +320,7 @@ EXAMPLE :  var name = "John Doe"
 // }
 // parent();
 
+
 // debugger
 // function parent() {
 //   let a1 = 100;
