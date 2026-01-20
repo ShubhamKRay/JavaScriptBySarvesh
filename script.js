@@ -524,3 +524,24 @@ console.log(newObj);// {id:1, ename:'Shubham Ray'}
 
 
 
+
+
+let obj2 ={
+  id:2,
+  name:{
+    firstName: "Kendall",
+    lastName: "Jennifier",
+  },
+  hobbies: ["Reading","Traveling","Coding"],
+  address:{
+    city:"NewYork",
+    state:"US",
+    pin: 43252,
+  },
+}
+console.log(obj2.name.firstName);
+console.log(obj2.name.lastName);
+console.log(obj2.hobbies[1]);
+console.log(obj2.address.state);
+
+
