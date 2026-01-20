@@ -372,33 +372,59 @@ EXAMPLE :  var name = "John Doe"
 
 //! 8) ARROW FUNCTION
 
-let a1 = () => {
-  console.log("I am Arrow Function 1");
-};
-a1();
+// let a1 = () => {
+//   console.log("I am Arrow Function 1");
+// };
+// a1();
 
-// if no parameter, we can replace() with _
-let a2 = (_) => {
-  console.log("I am Arrow function 2");
-};
-a2();
+// // if no parameter, we can replace() with _
+// let a2 = (_) => {
+//   console.log("I am Arrow function 2");
+// };
+// a2();
 
-// if having only one parameter, () is not mandatory
-let a3 = (n1) => {
-  console.log("I am Arrow function 3", n1);
-};
-a3(100);
+// // if having only one parameter, () is not mandatory
+// let a3 = (n1) => {
+//   console.log("I am Arrow function 3", n1);
+// };
+// a3(100);
 
-// if having only one line of code {} is not mandatory
-let a4 = () => console.log("I am Arrow function 4");
-a4();
+// // if having only one line of code {} is not mandatory
+// let a4 = () => console.log("I am Arrow function 4");
+// a4();
 
-// explicit return , {} and return "keyword" is mandatory
-let a5 = (n1, n2) => {
-  return n1 + n2;
-};
-console.log(a5(10, 20));
+// // explicit return , {} and return "keyword" is mandatory
+// let a5 = (n1, n2) => {
+//   return n1 + n2;
+// };
+// console.log(a5(10, 20));
 
-//implicit return, {} and "return" keyword is not required
-let a6 = (n1, n2) => n1 + n2;
-console.log(a6(5, 10));
+// //implicit return, {} and "return" keyword is not required
+// let a6 = (n1, n2) => n1 + n2;
+// console.log(a6(5, 10));
+
+
+//! Object : It is used 
+
+const obj1 ={
+  id : 1,
+  fname : "Rose"
+}
+console.log(obj1);
+
+//! 2) object constructer
+const obj2 = new Object({ id : 2, fname:"Grace"});
+console.log(obj2);
+
+//! 3) Constructor function
+
+function Student(id,firstName){
+  this.id=id;
+  this.firstName=firstName;
+
+}
+let s1 = new Student(1,"Honey")
+console.log(s1);
+
+let s2 = new Student(2,"Jennifier");
+console.log(s2);
