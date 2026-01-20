@@ -406,25 +406,81 @@ EXAMPLE :  var name = "John Doe"
 
 //! Object : It is used 
 
-const obj1 ={
-  id : 1,
-  fname : "Rose"
+// const obj1 ={
+//   id : 1,
+//   fname : "Rose"
+// }
+// console.log(obj1);
+
+// //! 2) object constructer
+// const obj2 = new Object({ id : 2, fname:"Grace"});
+// console.log(obj2);
+
+// //! 3) Constructor function
+
+// function Student(id,firstName){
+//   this.id=id;
+//   this.firstName=firstName;
+
+// }
+// let s1 = new Student(1,"Honey")
+// console.log(s1);
+
+// let s2 = new Student(2,"Jennifier");
+// console.log(s2);
+
+
+
+
+
+
+
+//! CRUD WITH OBJECT
+const obj = {
+  id: 1,
+  fname: "Thomas",
+  lname: "Shelby",
+  age: 23,
+  company: "shelby Pvt Ltd",
+
+};
+console.log(obj);
+
+
+//! Read
+//there are two ways to read the property of object
+// 1) using dot operator
+
+console.log(obj.fname);
+console.log(obj.degree);
+
+// 2) using square bracket operator
+
+console.log(obj["age"]);
+
+let x = "company"
+console.log(obj[x]);
+
+
+
+//! Can We iterate function --->  yes we can do it, by using for in loop
+// for in loop
+for (let i in obj){
+  console.log(obj[i]);
 }
-console.log(obj1);
 
-//! 2) object constructer
-const obj2 = new Object({ id : 2, fname:"Grace"});
-console.log(obj2);
 
-//! 3) Constructor function
+//! UPDATE
+obj.company="SHUBH"
+console.log(obj);
 
-function Student(id,firstName){
-  this.id=id;
-  this.firstName=firstName;
 
-}
-let s1 = new Student(1,"Honey")
-console.log(s1);
+//! ADD NEW KEY
+  obj.salary = 50000;
+  console.log(obj);
 
-let s2 = new Student(2,"Jennifier");
-console.log(s2);
+
+
+  //! DELETE
+  delete obj.salary
+  console.log(obj);
