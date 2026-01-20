@@ -320,7 +320,6 @@ EXAMPLE :  var name = "John Doe"
 // }
 // parent();
 
-
 // debugger
 // function parent() {
 //   let a1 = 100;
@@ -403,8 +402,7 @@ EXAMPLE :  var name = "John Doe"
 // let a6 = (n1, n2) => n1 + n2;
 // console.log(a6(5, 10));
 
-
-//! Object : It is used 
+//! Object : It is used
 
 // const obj1 ={
 //   id : 1,
@@ -429,12 +427,6 @@ EXAMPLE :  var name = "John Doe"
 // let s2 = new Student(2,"Jennifier");
 // console.log(s2);
 
-
-
-
-
-
-
 // //! CRUD WITH OBJECT
 // const obj = {
 //   id: 1,
@@ -445,7 +437,6 @@ EXAMPLE :  var name = "John Doe"
 
 // };
 // console.log(obj);
-
 
 // //! Read
 // //there are two ways to read the property of object
@@ -461,87 +452,64 @@ EXAMPLE :  var name = "John Doe"
 // let x = "company"
 // console.log(obj[x]);
 
-
-
 // //! Can We iterate function --->  yes we can do it, by using for in loop
 // // for in loop
 // for (let i in obj){
 //   console.log(obj[i]);
 // }
 
-
 // //! UPDATE
 // obj.company="SHUBH"
 // console.log(obj);
-
 
 // //! ADD NEW KEY
 //   obj.salary = 50000;
 //   console.log(obj);
 
-
-
 //   //! DELETE
 //   delete obj.salary
 //   console.log(obj);
 
-
-
-
-
-
-
-
-
-
 //! OBJECT METHODS
 
 let obj = {
-  id:1,
+  id: 1,
   ename: "Shubham Ray",
 };
-
-
 
 //! 1) Onject.keys()
 
 let keys = Object.keys(obj);
-console.log(keys);//["id","ename"]
+console.log(keys); //["id","ename"]
 
 //! 2) Object.values()
 
 let values = Object.values(obj);
-console.log(values);// [1,"Shubham Ray"]
+console.log(values); // [1,"Shubham Ray"]
 
 //! 3) Object.entries()
 
 let keyAndValue = Object.entries(obj);
-console.log(keyAndValue);// [ ["id" , 1] , ["ename" , "Shubham Ray"]]
+console.log(keyAndValue); // [ ["id" , 1] , ["ename" , "Shubham Ray"]]
 
 //! 4) Object.fromEntries()
 let newObj = Object.fromEntries(keyAndValue);
-console.log(newObj);// {id:1, ename:'Shubham Ray'}
+console.log(newObj); // {id:1, ename:'Shubham Ray'}
 
-
-
-
-
-let obj2 ={
-  id:2,
-  name:{
+let obj2 = {
+  id: 2,
+  name: {
     firstName: "Kendall",
     lastName: "Jennifier",
   },
-  hobbies: ["Reading","Traveling","Coding"],
-  address:{
-    city:"NewYork",
-    state:"US",
+  hobbies: ["Reading", "Traveling", "Coding"],
+  address: {
+    city: "NewYork",
+    state: "US",
     pin: 43252,
   },
-}
+};
 console.log(obj2.name.firstName);
 console.log(obj2.name.lastName);
 console.log(obj2.hobbies[1]);
 console.log(obj2.address.state);
-
-
