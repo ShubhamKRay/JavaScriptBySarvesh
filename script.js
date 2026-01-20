@@ -435,52 +435,92 @@ EXAMPLE :  var name = "John Doe"
 
 
 
-//! CRUD WITH OBJECT
-const obj = {
-  id: 1,
-  fname: "Thomas",
-  lname: "Shelby",
-  age: 23,
-  company: "shelby Pvt Ltd",
+// //! CRUD WITH OBJECT
+// const obj = {
+//   id: 1,
+//   fname: "Thomas",
+//   lname: "Shelby",
+//   age: 23,
+//   company: "shelby Pvt Ltd",
 
+// };
+// console.log(obj);
+
+
+// //! Read
+// //there are two ways to read the property of object
+// // 1) using dot operator
+
+// console.log(obj.fname);
+// console.log(obj.degree);
+
+// // 2) using square bracket operator
+
+// console.log(obj["age"]);
+
+// let x = "company"
+// console.log(obj[x]);
+
+
+
+// //! Can We iterate function --->  yes we can do it, by using for in loop
+// // for in loop
+// for (let i in obj){
+//   console.log(obj[i]);
+// }
+
+
+// //! UPDATE
+// obj.company="SHUBH"
+// console.log(obj);
+
+
+// //! ADD NEW KEY
+//   obj.salary = 50000;
+//   console.log(obj);
+
+
+
+//   //! DELETE
+//   delete obj.salary
+//   console.log(obj);
+
+
+
+
+
+
+
+
+
+
+//! OBJECT METHODS
+
+let obj = {
+  id:1,
+  ename: "Shubham Ray",
 };
-console.log(obj);
-
-
-//! Read
-//there are two ways to read the property of object
-// 1) using dot operator
-
-console.log(obj.fname);
-console.log(obj.degree);
-
-// 2) using square bracket operator
-
-console.log(obj["age"]);
-
-let x = "company"
-console.log(obj[x]);
 
 
 
-//! Can We iterate function --->  yes we can do it, by using for in loop
-// for in loop
-for (let i in obj){
-  console.log(obj[i]);
-}
+//! 1) Onject.keys()
+
+let keys = Object.keys(obj);
+console.log(keys);//["id","ename"]
+
+//! 2) Object.values()
+
+let values = Object.values(obj);
+console.log(values);// [1,"Shubham Ray"]
+
+//! 3) Object.entries()
+
+let keyAndValue = Object.entries(obj);
+console.log(keyAndValue);// [ ["id" , 1] , ["ename" , "Shubham Ray"]]
+
+//! 4) Object.fromEntries()
+let newObj = Object.fromEntries(keyAndValue);
+console.log(newObj);// {id:1, ename:'Shubham Ray'}
 
 
-//! UPDATE
-obj.company="SHUBH"
-console.log(obj);
 
-
-//! ADD NEW KEY
-  obj.salary = 50000;
-  console.log(obj);
-
-
-
-  //! DELETE
-  delete obj.salary
-  console.log(obj);
