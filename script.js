@@ -402,7 +402,23 @@ EXAMPLE :  var name = "John Doe"
 // let a6 = (n1, n2) => n1 + n2;
 // console.log(a6(5, 10));
 
-//! Object : It is used
+//! 9) IMMEDIATLY INVOCKED FUNCTION EXPRESSION ( IIFE )
+// let x = (function () {
+//   console.log("I am IIFE");
+//   return "Hii";
+// })();
+// console.log(x); // Hii
+
+// function demo() {
+//   return "Hi";
+// }
+// let val = demo();
+
+//! 10) CONSTRUCTOR FUNCTION : used to create objects
+
+//! OBJECTS : it is used to store multiple data in the form of key and value pairs
+// There are 3 ways to create object:-
+// //! 1) Object literals
 
 // const obj1 ={
 //   id : 1,
@@ -428,6 +444,8 @@ EXAMPLE :  var name = "John Doe"
 // console.log(s2);
 
 // //! CRUD WITH OBJECT
+
+// //! 1) CREATE
 // const obj = {
 //   id: 1,
 //   fname: "Thomas",
@@ -438,19 +456,18 @@ EXAMPLE :  var name = "John Doe"
 // };
 // console.log(obj);
 
-// //! Read
+// //! 2) Read
 // //there are two ways to read the property of object
 // // 1) using dot operator
 
 // console.log(obj.fname);
-// console.log(obj.degree);
+// console.log(obj.degree);//ud
 
-// // 2) using square bracket operator
+// // 2) using square bracket
 
-// console.log(obj["age"]);
-
-// let x = "company"
-// console.log(obj[x]);
+// let x = "lname";
+// console.log(obj["age"]);//23
+// console.log(obj[x]);// Shelby
 
 // //! Can We iterate function --->  yes we can do it, by using for in loop
 // // for in loop
@@ -477,7 +494,7 @@ let obj = {
   ename: "Shubham Ray",
 };
 
-//! 1) Onject.keys()
+//! 1) Object.keys()
 
 let keys = Object.keys(obj);
 console.log(keys); //["id","ename"]
@@ -504,8 +521,8 @@ let obj2 = {
   },
   hobbies: ["Reading", "Traveling", "Coding"],
   address: {
-    city: "NewYork",
-    state: "US",
+    city: "Newyork",
+    state: "USA",
     pin: 43252,
   },
 };
