@@ -489,44 +489,237 @@ EXAMPLE :  var name = "John Doe"
 
 //! OBJECT METHODS
 
-let obj = {
-  id: 1,
-  ename: "Shubham Ray",
-};
+// let obj = {
+//   id: 1,
+//   ename: "Shubham Ray",
+// };
 
-//! 1) Object.keys()
+// //! 1) Object.keys()
 
-let keys = Object.keys(obj);
-console.log(keys); //["id","ename"]
+// let keys = Object.keys(obj);
+// console.log(keys); //["id","ename"]
 
-//! 2) Object.values()
+// //! 2) Object.values()
 
-let values = Object.values(obj);
-console.log(values); // [1,"Shubham Ray"]
+// let values = Object.values(obj);
+// console.log(values); // [1,"Shubham Ray"]
 
-//! 3) Object.entries()
+// //! 3) Object.entries()
 
-let keyAndValue = Object.entries(obj);
-console.log(keyAndValue); // [ ["id" , 1] , ["ename" , "Shubham Ray"]]
+// let keyAndValue = Object.entries(obj);
+// console.log(keyAndValue); // [ ["id" , 1] , ["ename" , "Shubham Ray"]]
 
 //! 4) Object.fromEntries()
-let newObj = Object.fromEntries(keyAndValue);
-console.log(newObj); // {id:1, ename:'Shubham Ray'}
+// let newObj = Object.fromEntries(keyAndValue);
+// console.log(newObj); // {id:1, ename:'Shubham Ray'}
 
-let obj2 = {
-  id: 2,
-  name: {
-    firstName: "Kendall",
-    lastName: "Jennifier",
-  },
-  hobbies: ["Reading", "Traveling", "Coding"],
-  address: {
-    city: "Newyork",
-    state: "USA",
-    pin: 43252,
-  },
+// let obj2 = {
+//   id: 2,
+//   name: {
+//     firstName: "Kendall",
+//     lastName: "Jennifier",
+//   },
+//   hobbies: ["Reading", "Traveling", "Coding"],
+//   address: {
+//     city: "Newyork",
+//     state: "USA",
+//     pin: 43252,
+//   },
+// };
+// console.log(obj2.name.firstName);
+// console.log(obj2.name.lastName);
+// console.log(obj2.hobbies[1]);
+// console.log(obj2.address.state);
+
+//!   OBJECT DESTRUCTURING
+
+// let obj1 = {
+//   id: 1,
+//   fname: "Thomas",
+//   lname: "shelby",
+// };
+// let { fname: firstName = "NA", lname, id, salary = 0 } = obj1;
+
+// console.log(firstName);
+// console.log(lname);
+// console.log(id);
+// console.log(salary);
+
+// let obj2 = {
+//   id: 2,
+//   name: {
+//     firstName: "Kendall",
+//     lastName: "Jennifier",
+//   },
+//   hobbies: ["Reading", "Traveling", "Coding"],
+//   address: {
+//     city: "Newyork",
+//     state: "USA",
+//     pin: 43252,
+//   },
+//   details: {
+//     id: "JAFS123",
+//     course: "JavaFullStack",
+//   },
+// };
+
+// let {
+//   id,
+//   Name: { firstName },
+//   hobbies: [, , h3],
+//   address: { city },
+//   details: { id: detailID, course },
+// } = obj2;
+
+// console.log(id, firstName, h3, city, detailID, course);
+
+// //! ARRAY DESTRUCTURING
+// let arr = [10, 20, 30, 40, 50];
+// let [, n1, , n2] = arr;
+// console.log(n1, n2);
+
+// const user = {
+//   id: 1,
+//   name: "Leanne Graham",
+//   username: "Bret",
+//   email: "Sincere@april.biz",
+//   address: {
+//     street: "Kulas Light",
+//     suite: "Apt. 556",
+//     city: "Gwenborough",
+//     zipcode: "92998-3874",
+//     geo: {
+//       lat: "-37.3159",
+//       lng: "81.1496",
+//     },
+//   },
+//   phone: "1-770-736-8031 x56442",
+//   website: "hildegard.org",
+//   company: {
+//     name: "Romaguera-Crona",
+//     catchPhrase: "Multi-layered client-server neural-net",
+//     bs: "harness real-time e-markets",
+//   },
+// };
+
+// name ,username ,street ,zipcode ,lat , lng,companyName ,
+
+// let {
+//   name,
+//   username,
+//   address: {
+//     street,
+//     zipcode,
+//     geo: { lat, lng },
+//   },
+//   company: { name: companyName },
+// } = user;
+
+//! "this" keyword
+
+// console.log(window); // GLOBAL OBJECT
+// console.log(this); // POINTS TO WINDOW OBJECT
+
+// //! HOW TO CREATE YOUR OWN METHOD
+// //! NOTE : DONT USE ARROW FUNC TO CREATE METHOD BCOZ "this" KEYWORD REFERS TO WINDOW OBJECT
+
+// let student = {
+//   id: 1,
+//   fname: "john",
+//   lname: "doe",
+//   getFullName: function () {
+//     console.log(`${this.fname} ${this.lname}`);
+//   },
+//   getEmail() {
+//     console.log(`${this.fname}.${this.lname}@gmail.com`);
+//   },
+// };
+
+// student.getFullName();
+// student.getEmail();
+
+//! call() , apply() and bind()
+
+// function getFullName() {
+//   return `${this.firstName} ${this.lastName}`;
+// }
+
+// function getCourseDetails(sub1, sub2) {
+//   return `${this.course} includes ${sub1} ${sub2}`;
+// }
+
+// let user1 = {
+//   id: 1,
+//   firstName: "Thomas",
+//   lastName: "Shelby",
+//   course: "Mern Stack",
+// };
+
+// let user2 = {
+//   id: 2,
+//   firstName: "Cillian",
+//   lastName: "Murphy",
+//   course: "Java Full Stack",
+// };
+
+// console.log(user1);
+// console.log(user2);
+
+// //! call() : immediately calls the function
+// let fullName1 = getFullName.call(user1);
+// console.log(fullName1);
+
+// let courseDetails1 = getCourseDetails.call(user1, "JS", "NodeJS");
+// console.log(courseDetails1);
+
+// //! apply() : immediately calls the function
+// let fullName2 = getFullName.apply(user2);
+// console.log(fullName2);
+
+// let courseDetails2 = getCourseDetails.apply(user2, ["Java", "SpringBoot"]);
+// console.log(courseDetails2);
+
+// //! bind() : returns bounded function which can be called later on
+// let boundedGetFullName = getFullName.bind(user1);
+// console.log(boundedGetFullName());
+
+// let boundedCouseDetails = getCourseDetails.bind(user1);
+// console.log(boundedCouseDetails("HTML", "NODE JS"));
+
+//! - WHENEVER WE DECLARE GLOBAL VAROABLES GLOBAL SCOPE AND SCRIPT SCOPE CREATES
+// - WHENEVER WE DECLARE GLOBAL VARIABLES GLOBAL SCOPE AND SCRIPT SCOPE CREATES
+// - IN GLOBAL SCOPE WE CAN SEE "var" VARIABLES AND FUNCTION DECLARATIONS
+// - IN SCRIPT SCOPE WE CAN SEE "let" AND "const" VARIABLES, DUE TO TDZ
+
+//! - BLOCK SCOPE :
+// - WHENEVER WE DECLARE "let" AND "const" VARIABLES INSIDE CONDITIONAL OR LOOPING STATEMENT THOSE VARIABLES WILL ACT AS LOCAL VARIABLES AND HAVING BLOCK SCOPE
+
+//! - NOTE: "var" VARIABLES WILL ACT AS GLOBAL  VARIABLE AND HAVING GLOBAL SCOPE WITHIN CONDITIONAL OR LOOPING STATEMENT
+
+//! - LOOPING SCOPE :
+// - WHENEVER WE DECLARE "var", "let" OR "const" VARIABLES INSIDE A FUNCTION, IT WILL ACT AS LOCAL VARIABLES HAVING LOCAL SCOPE
+
+//! - FUNCTION SCOPE :
+// - "var" VARIABLES ARE KNOWN AS FUNCTION SCOPE VARIABLES BECOZ IT ACTS LIKE LOCAL VARIABLE INSIDE A FUNCTION
+
+//! JAVASCRIPT OBJECT NOTATION (JSON)
+
+let user1 = {
+  id: 1,
+  fname: "Thomas",
+  lname: "Shelby",
 };
-console.log(obj2.name.firstName);
-console.log(obj2.name.lastName);
-console.log(obj2.hobbies[1]);
-console.log(obj2.address.state);
+
+function storeDataInLocalStorage() {
+  let jsonData = JSON.stringify(user1); // JS TO JSON
+  let jsonData1 = JSON.stringify(user1);
+  localStorage.setItem("userData", jsonData, jsonData1);
+}
+
+function getDataFromLocalStorage() {
+  let data = localStorage.getItem("userData");
+  let userObject = JSON.parse(data); //JSON TO JS
+  console.log(userObject);
+  document.writeln(`<em>${userObject.fname}</em>`);
+  document.writeln(`<em>${userObject.lname}</em>`);
+}
