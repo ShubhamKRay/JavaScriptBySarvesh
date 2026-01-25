@@ -706,8 +706,8 @@ EXAMPLE :  var name = "John Doe"
 
 let user1 = {
   id: 1,
-  fname: "Thomas",
-  lname: "Shelby",
+  fname: "Cillian",
+  lname: "Murphy",
 };
 
 function storeDataInLocalStorage() {
