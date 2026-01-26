@@ -533,17 +533,17 @@ EXAMPLE :  var name = "John Doe"
 
 //!   OBJECT DESTRUCTURING
 
-// let obj1 = {
-//   id: 1,
-//   fname: "Thomas",
-//   lname: "shelby",
-// };
-// let { fname: firstName = "NA", lname, id, salary = 0 } = obj1;
+let obj1 = {
+  id: 1,
+  fname: "Shubham",
+  lname: "Ray",
+};
+let { fname: firstName = "NA", lname, id, salary = 0 } = obj1;
 
-// console.log(firstName);
-// console.log(lname);
-// console.log(id);
-// console.log(salary);
+console.log(firstName);
+console.log(lname);
+console.log(id);
+console.log(salary);
 
 // let obj2 = {
 //   id: 2,
