@@ -724,14 +724,6 @@ EXAMPLE :  var name = "John Doe"
 //   document.writeln(`<em>${userObject.lname}</em>`);
 // }
 
-
-
-
-
-
-
-
-
 //! splice(startIndex, deleteCount, newElements)
 // let arr2 = [100,200,300,400];
 // console.log(arr2); //[100,200,300,400]
@@ -747,19 +739,14 @@ EXAMPLE :  var name = "John Doe"
 // arr2.splice(2,3);
 // console.log(arr2); //
 
-
 // let arr3 = [1000,2000,3000,4000];
 // arr3.splice(0,3);
 // console.log(arr3); // [4000]
 
-
 // //! DELETE AND ADD
 // let arr4 = [100,200,300,400,500,600];
-// arr4.splice(2,2,1000,2000) 
+// arr4.splice(2,2,1000,2000)
 // console.log(arr4);  // [100,200,1000,2000,500,600]
-
-
-
 
 //! slice( startIndex, endIndex )
 // //          -6 -5 -4 -3 -2 -1
@@ -776,10 +763,6 @@ EXAMPLE :  var name = "John Doe"
 // let newArr3 = arr5.slice(-2,5);
 // console.log(newArr3);
 
-
-
-
-
 //! sort()
 // let arr6 = [9,5,2,1,0,4,7];
 // arr6.sort(); //ASC
@@ -793,15 +776,143 @@ EXAMPLE :  var name = "John Doe"
 // arr8.sort((a,b) => a-b);
 // console.log(arr8);//[10,31,38,49,80,615]
 
-
-
-
-
-
-
 //! concat()
-let arr9 = [10,20,30];
-let arr10 = [40,50,60];
+// let arr9 = [10,20,30];
+// let arr10 = [40,50,60];
 
-let containatedArr = arr9.concat(arr10);
-console.log(containatedArr);// [10,20,30,40,50,60]
+// let containatedArr = arr9.concat(arr10);
+// console.log(containatedArr);// [10,20,30,40,50,60]
+
+//! forEach ( callbackFunc ) : used to iterate an array, returns undefined
+
+// let arr1 = [10, 20, 30, 40, 50];
+
+// let returnVal1 = arr1.forEach((ele, idx, array) => {
+//   console.log(ele, idx, array);
+//   return ele + 5;
+// });
+// console.log(returnVal1); // undefined
+
+// console.log("---------------------------------------------");
+
+// //! map ( callbackFunc ) : used to iterate an array, returns new array
+
+// let returnVal2 = arr1.map((ele, idx, array) => {
+//   console.log();
+// });
+
+// //! filter (callbackFunc)
+// let arr2 = [100, 200, 300, 400, 500];
+
+// let returnVal3 = arr2.filter((ele, idx, array) => ele > 200);
+// console.log(returnVal3); //[300,400,500]
+
+// //! find( callbackFunc )
+// let returnVal4 = arr2.find((ele, idx, array) => {
+//   console.log(ele);
+//   return ele > 200;
+// });
+// console.log(returnVal4); // 300
+
+// //! findIndex( callbackFunc )
+// let returnVal5 = arr2.findIndex((ele, idx, array) => {
+//   console.log(ele);
+//   return ele > 200;
+// });
+// console.log(returnVal5); // 2
+
+// //! reduce( callbackFunc , accumulatorValue )
+// let arr3 = [10, 20, 30, 40, 50];
+
+// // let sum = arr3.reduce((ace,ele) => {
+// //     console.log(acc, ele);
+// //     return acc + ele;
+
+// // },0);
+// // console.log(sum);
+
+// // 1-line me
+
+// let sum = arr3.reduce((ace, ele) => acc + ele, 0);
+
+// console.log(sum);
+
+// let arr4 = [1, 2, 3, 4, 5];
+// //! toString()
+// let str1 = arr4.toString();
+// console.log(str1); // 1, 2, 3, 4, 5
+
+// //! join()
+// let str2 = arr4.join(" ");
+// console.log(str2); // 1 2 3 4 5
+
+// //! split
+// let str3 = "Hello";
+// console.log(str3.split(" "));
+
+// function palindome(word) {
+//   let output = word.split("").reverse().join("");
+//   return output === word ? true : false;
+// }
+// console.log(palindome("abc"));
+// console.log(palindome("racecar"));4
+
+
+
+
+
+//! Array Destructuring
+// let arr1 = [10, 20, 30, 40, 50];
+// let [n1, n2, n3, n4, n5] = arr1;
+
+// console.log(n2, n5);
+
+
+
+// // skip elements while destructuring
+// let arr2 = [100, 200, 300, 400, 500];
+// let [, a1 , , , a2] = arr2;
+// console.log(a1,a2);
+
+
+// // nested array : - 1000,4000,5000
+// let arr3 = [1000, 2000, [3000, 4000], 5000];
+// let [b1, ,[,b2], b3] = arr3;
+// console.log(b1,b2,b3);
+
+
+
+// let arr4 = ["Hello", { id: 1, fname: "Thomas", lname: "Shelby" }];
+// let [str1, { fname }] = arr4;
+// console.log(str1, fname);
+
+
+
+
+
+
+//! REST AND SPREAD OPERATORS : ... variable
+
+function demo1(p1,p2,...p3){
+  console.log(p1,p2);
+  console.log(p3); // <- rets parameter [30,40,50,60,70,80,90]
+  console.log(arguments); // <- array like object, NOT PURE ARRAY
+}
+demo1(10,20,30,40,50,60,70,80,90);
+
+
+let arr1 = [10,20,30,40];
+let [x1,...x2] = arr1;
+console.log(x1);
+console.log(x2); // [20, 30, 40] <-- rest
+
+let arr2 = [100,200,300,400]
+let arr3 = [...arr2]   // <-- copy elements
+console.log(...arr3); // <--- spread : unpack
+
+
+
+
+
+
+
