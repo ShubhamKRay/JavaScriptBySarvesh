@@ -898,17 +898,23 @@ console.log(...arr3); // <--- spread : unpack
 
 
 
-// let obj1 = {
-//   id:1,
-//   fname:"Adolf",
-//   sal : 2000,
-//   address : { city : "Noida"}
-// };
 
-// let obj2 = {
-//   ...obj1,
-//   lname: "Hitler",
-//   sal : 70000
-// };
-// console.log(obj1);
-// console.log(obj2);
+
+
+
+
+
+let obj1 = {
+  id: 1,
+  fname: "Adolf",
+  sal: 2000,
+  address: { city: "Noida" },
+};
+
+let obj2 = {
+  ...obj1,
+  lname: "Hitler",
+  sal: 70000,
+};
+console.log(obj1);
+console.log(obj2);
