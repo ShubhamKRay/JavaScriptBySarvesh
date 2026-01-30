@@ -857,62 +857,58 @@ EXAMPLE :  var name = "John Doe"
 // console.log(palindome("abc"));
 // console.log(palindome("racecar"));4
 
-
-
-
-
 //! Array Destructuring
 // let arr1 = [10, 20, 30, 40, 50];
 // let [n1, n2, n3, n4, n5] = arr1;
 
 // console.log(n2, n5);
 
-
-
 // // skip elements while destructuring
 // let arr2 = [100, 200, 300, 400, 500];
 // let [, a1 , , , a2] = arr2;
 // console.log(a1,a2);
-
 
 // // nested array : - 1000,4000,5000
 // let arr3 = [1000, 2000, [3000, 4000], 5000];
 // let [b1, ,[,b2], b3] = arr3;
 // console.log(b1,b2,b3);
 
-
-
 // let arr4 = ["Hello", { id: 1, fname: "Thomas", lname: "Shelby" }];
 // let [str1, { fname }] = arr4;
 // console.log(str1, fname);
 
-
-
-
-
-
 //! REST AND SPREAD OPERATORS : ... variable
 
-function demo1(p1,p2,...p3){
-  console.log(p1,p2);
+function demo1(p1, p2, ...p3) {
+  console.log(p1, p2);
   console.log(p3); // <- rets parameter [30,40,50,60,70,80,90]
   console.log(arguments); // <- array like object, NOT PURE ARRAY
 }
-demo1(10,20,30,40,50,60,70,80,90);
+demo1(10, 20, 30, 40, 50, 60, 70, 80, 90);
 
-
-let arr1 = [10,20,30,40];
-let [x1,...x2] = arr1;
+let arr1 = [10, 20, 30, 40];
+let [x1, ...x2] = arr1;
 console.log(x1);
 console.log(x2); // [20, 30, 40] <-- rest
 
-let arr2 = [100,200,300,400]
-let arr3 = [...arr2]   // <-- copy elements
+let arr2 = [100, 200, 300, 400];
+let arr3 = [...arr2]; // <-- copy element
 console.log(...arr3); // <--- spread : unpack
 
 
 
 
+// let obj1 = {
+//   id:1,
+//   fname:"Adolf",
+//   sal : 2000,
+//   address : { city : "Noida"}
+// };
 
-
-
+// let obj2 = {
+//   ...obj1,
+//   lname: "Hitler",
+//   sal : 70000
+// };
+// console.log(obj1);
+// console.log(obj2);
