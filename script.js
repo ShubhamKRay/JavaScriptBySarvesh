@@ -1064,7 +1064,7 @@ EXAMPLE :  var name = "John Doe"
 
 //! TIMER FUNCTIONS
 
-//! setInterval( callback , intervalTime )
+// //! setInterval( callback , intervalTime )
 // let intervalID = setInterval(() => {
 //   console.log("Hiii");
 // }, 2000);
@@ -1084,13 +1084,13 @@ EXAMPLE :  var name = "John Doe"
 //! PROMISE
 
 // const p1 = new Promise((resolve, reject) => {
-//   if(10 > 2){
-//     resolve("Hello WOrld");
-
+//   if (10 > 2) {
+//     resolve("Hello World");
 //   } else {
 //     reject("Bye Bye");
 //   }
 // });
+
 // console.log(p1);
 
 // p1.then((data) => {
@@ -1102,15 +1102,22 @@ EXAMPLE :  var name = "John Doe"
 // });
 
 // p1.finally(() => {
-//   console.log("I am finally Block");
+//   console.log("I am finally block");
 // });
 
-//! Promise with then, catch and finally
-
+//! PROMISE WITH THEN, CATCH AND FINALLY
 // const API_URL = "https://dummyjson.com/todos";
 
-// let p1 = fetch(API_URL)
+// let p1 = fetch(API_URL);
 // console.log(p1);
+
+// /*
+// Promise{
+// Prototype: [[Promise]],
+// PromiseState : "fullfilled",
+// PromiseResult : Response
+// }
+// */
 
 // p1.then((response) => {
 //   let p2 = response.json();
@@ -1125,60 +1132,37 @@ EXAMPLE :  var name = "John Doe"
 //   });
 // });
 
-//   p1.catch((err) => {
-//     console.log(err);
-//   });
+// p1.catch((err) => {
+//   console.log(err);
+// });
 
 //! PROMISE WITH ASYNC AND AWAIT
-
-const API_URL = "https://dummyjson.com/todos";
+// const API_URL = "https://dummyjson.com/todos";
 
 // async function getTodos(url) {
-//   try{
+//   try {
 //     let response = await fetch(url);
 //     let data = await response.json();
-//     console.log(data); // {todos : Array(30), total: 254, skip: 0, limit: 30}
+//     console.log(data); // {todos: Array(30), total: 254, skip: 0, limit: 30}
 
 //     displayTodos(data.todos); // Array(30)
-//   } catch(err){
+//   } catch (err) {
 //     console.log(err);
 //   }
 // }
 // getTodos(API_URL);
 
-// function displayTodos(allTodos){
+// function displayTodos(allTodos) {
 //   console.log(allTodos);
 
-//   allTodos.map((ele) => {
+//   allTodos.forEach((ele) => {
 //     let { id, userId, todo, completed } = ele;
 
-//     document.writeln(`<div class = 'todo'><h4>${todo}</h4><span>${completed ? "completed" : "Pending"}</span></div>`);
-//   })
+//     document.writeln(`
+//       <div class = 'todo'>
+//         <h4>${todo}</h4>
+//         <span>${completed ? "Completed" : "Pending"}</span>
+//       </div>
+//       `);
+//   });
 // }
-
-const PRODUCTAPI_URL = "https://dummyjson.com/products";
-
-async function getProducts(url) {
-  try {
-    let response = await fetch(url);
-    let data = await response.json();
-    console.log(data); // {products : Array(30), total: 254, skip: 0, limit: 30}
-
-    displayProduct(data.product); // Array(30)
-  } catch (err) {
-    console.log(err);
-  }
-}
-getProducts(API_URL);
-
-function displayProduct(allProduct) {
-  console.log(allProduct);
-
-  allProduct.map((ele) => {
-    let { id, userId, product, completed } = ele;
-
-    document.writeln(
-      `<div class = 'product'><h4>${product}</h4><span>${completed ? "completed" : "Pending"}</span></div>`,
-    );
-  });
-}
