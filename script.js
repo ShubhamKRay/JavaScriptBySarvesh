@@ -1111,13 +1111,13 @@ EXAMPLE :  var name = "John Doe"
 // let p1 = fetch(API_URL);
 // console.log(p1);
 
-// /*
-// Promise{
-// Prototype: [[Promise]],
-// PromiseState : "fullfilled",
-// PromiseResult : Response
-// }
-// */
+/*
+Promise{
+Prototype: [[Promise]],
+PromiseState : "fullfilled",
+PromiseResult : Response
+}
+*/
 
 // p1.then((response) => {
 //   let p2 = response.json();
