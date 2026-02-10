@@ -717,31 +717,31 @@ EXAMPLE :  var name = "John Doe"
 //  - "var" VARIABLES ARE KNOWN AS FUNCTION SCOPE VARIABLES BECOZ IT ACTS LIKE LOCAL VARIABLE INSIDE A FUNCTION
 
 //! JAVASCRIPT OBJECT NOTATION (JSON)
-let user1 = {
-  id: 1,
-  fname: "John",
-  lname: "Doe",
-};
+// let user1 = {
+//   id: 1,
+//   fname: "John",
+//   lname: "Doe",
+// };
 
-function storeDataInLocalStorage() {
-  let jsonData = JSON.stringify(user1); // JS TO JSON
-  localStorage.setItem("usersData", jsonData);
-}
+// function storeDataInLocalStorage() {
+//   let jsonData = JSON.stringify(user1); // JS TO JSON
+//   localStorage.setItem("usersData", jsonData);
+// }
 
-function getDataFromLocalStorage() {
-  let data = localStorage.getItem("usersData");
-  let userObject = JSON.parse(data); // JSON TO JS
-  console.log(userObject);
-  document.writeln(`<em>${userObject.fname}</em>`);
-}
+// function getDataFromLocalStorage() {
+//   let data = localStorage.getItem("usersData");
+//   let userObject = JSON.parse(data); // JSON TO JS
+//   console.log(userObject);
+//   document.writeln(`<em>${userObject.fname}</em>`);
+// }
 
-function removeSingleDataFromLocalStorage() {
-  localStorage.removeItem("demo1");
-}
+// function removeSingleDataFromLocalStorage() {
+//   localStorage.removeItem("demo1");
+// }
 
-function clearDataFromLocalStorage() {
-  localStorage.clear();
-}
+// function clearDataFromLocalStorage() {
+//   localStorage.clear();
+// }
 
 //! ARRAYS : hetrogenous in nature
 
@@ -1166,3 +1166,23 @@ function clearDataFromLocalStorage() {
 //       `);
 //   });
 // }
+
+
+
+
+
+//! Module
+
+
+// import { greet, sum } from "./function.js";
+
+// greet();
+// sum(10, 20);
+
+import { greet, sum as add } from "./function.js";
+greet();
+add(10, 20);
+
+
+import x from "./function.js";
+x(5,4);
